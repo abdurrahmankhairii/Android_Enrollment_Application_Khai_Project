@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Enroll"
+    android:background="@color/sky_blue">
+
+    !-- Logo Image -->
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="342dp"
+        android:layout_height="93dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/presuniv_logo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Subject List Text -->
+    <TextView
+        android:id="@+id/subjectTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subject List"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/logoImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- LinearLayout for Subject List -->
+    <LinearLayout
+        android:id="@+id/subjectListLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@color/dark_grey"
+        app:layout_constraintTop_toBottomOf="@id/subjectTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Total Credits Text -->
+    <TextView
+        android:id="@+id/totalCreditsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Credits: 0"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/subjectListLayout"
+        app:layout_constraintStart_toStartOf="@id/subjectListLayout"
+        app:layout_constraintEnd_toEndOf="@id/subjectListLayout" />
+
+
+
+    <!-- Submit Button -->
+    <Button
+        android:id="@+id/buttonSubmit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="32dp"
+        android:text="Submit"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/grey"
+        app:layout_constraintTop_toBottomOf="@id/totalCreditsTextView"
+        app:layout_constraintStart_toStartOf="@id/subjectListLayout"
+        app:layout_constraintEnd_toEndOf="@id/subjectListLayout" />
+
+    <!-- LinearLayout for "Do you wanna leave?" and "Log Out" -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/buttonSubmit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- "Do you wanna leave?" Text -->
+        <TextView
+            android:id="@+id/doYouWannaLeaveText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Do you wanna leave?"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <!-- "Log Out" Button -->
+        <Button
+            android:id="@+id/buttonLogOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Log Out"
+            android:textColor="@color/white"
+            android:background="?attr/selectableItemBackground"
+            android:padding="0dp"
+            android:layout_marginStart="8dp"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- "Khai Project" Text -->
+    <TextView
+        android:id="@+id/khaiProjectText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Khai Project"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:fontFamily="@font/montserrat_bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
